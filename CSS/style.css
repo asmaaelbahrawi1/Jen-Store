@@ -1,0 +1,928 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    color: var(--dark-gray);
+    background-color: #fff;
+    background-image: url('../images/BG-home1.jpg');
+}
+*{
+    box-sizing: border-box;
+    
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style-type: none ;
+
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+/* button{
+    color:#fff;
+    background-color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 11px 25px;
+    transition: color 0.5s ease-in-out;
+   
+}
+button:hover{
+    color:#000;
+    background-color: #fff;
+} */
+.hvr-bounce-to-right{
+    color:#fff;
+    background-color: #000;
+    border: 1px solid #000;
+    cursor: pointer;
+    padding: 11px 25px;
+}
+.hvr-bounce-to-right:before {
+    background-color: #fff;
+
+}
+.hvr-bounce-to-right:hover{
+    color:#000;
+}
+
+.container, .shop-container, .wedding-container , .holiday-container , .footer-container{
+    width: 90%;
+    margin: auto;
+}
+
+/* ------------------------main-section-------------------------------- */
+main{
+    background-image: url('../images/slider-1.png');
+    background-size: cover;
+    background-position: center;
+    animation: changeBackground 10s infinite; 
+    height: 1000px;
+
+
+}
+@keyframes changeBackground {
+    0% {
+        background-image: url('../images/slider-1.png');
+    }
+    50%  {
+        background-image: url('../images/slider-2.png');
+    }
+    100% {
+        background-image: url('../images/slider-1.png');
+    }
+}
+/* sticky navbar */
+header.sticky{
+    position: fixed;
+    top:0px;
+    left:0px;
+    z-index: 1000;
+    background-color: #fff;
+    opacity: .9;
+    width: 100%;
+    margin: auto;
+    animation: fadeIn .5s linear;
+}
+header .hidden {
+    display: none;
+}
+@keyframes fadeIn {
+    0%{
+    opacity: 0;
+    transform: translateY(-10px); 
+    
+    }
+    
+    100%{
+    opacity: 1;
+    transform: translateY(0px); 
+    }
+        
+}
+
+
+.header-info{
+    border-bottom: .2px solid #d3d3d3;
+}
+.header-info .container{
+    padding: 1rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+
+}
+.header-info .container .left-list{
+    display: flex;
+    gap: 40px;
+}
+
+.header-info .container .left-list li , .header-info .container .right-list{
+    color:#808080;
+    font-size: .8rem;
+    cursor: pointer;
+}
+.speacial-span{
+    color:#000;
+}
+.header-info .container .right-list{
+    position: relative;
+    display: flex;
+    gap: 3px;
+    cursor: pointer;
+
+}
+/* hidden list */
+.toggle-sign::before {
+    content: '+';
+    font-size: 1rem;
+}
+.lang-hidden-list {
+    margin: 0;
+    padding: 0;
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    right: 0;
+}
+.header-info .container .right-list:hover .lang-hidden-list{
+    display: block;
+    background-color: #fff; 
+    z-index: 1; 
+    color:#808080;
+
+}
+.header-info .container .right-list:hover .toggle-sign::before{
+    content: '-'; 
+    font-size: 1rem;
+}
+.lang-hidden-list li {
+    padding: 8px 12px;
+}
+.lang-hidden-list li:hover {
+    color: #000; 
+}
+/* ---- */
+
+nav .container{
+    padding: 1rem 0rem;
+    display: grid;
+    grid-template-columns:1fr 0fr 1fr;
+
+    position: relative; 
+
+}
+
+  /* ---------------- */
+.mobile-menubar , .mobile-lock{
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.desktop-navbar .container .links{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 45px;
+}
+.desktop-navbar .container .tools{
+    display: flex;
+    justify-content: flex-end;
+    gap: 97px;
+    margin-top: 45px;
+
+}
+.desktop-navbar .container .tools li {
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
+.desktop-navbar .container .links li a{
+    color:#000;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+.desktop-navbar .container .links li a:hover{
+    border-bottom: 3px solid #000;
+}
+
+/* -----menubar open and close----- */
+.hide{
+    display:none;
+}
+
+
+
+
+
+/* ---------- */
+.main-content{
+    text-align: center;
+}
+.main-content .explore{
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #000;
+}
+.main-content h1{
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #000;
+}
+.main-content pre{
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+}
+
+.main-content img{
+    max-width: -webkit-fill-available;
+}
+
+.main-content button{
+    margin: 20px;
+}
+/* ---------------------------who page------------------------------- */
+
+.who-section{
+    background-image: url('../images/who.png');
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+    text-align: center;
+    align-content: center;
+
+}
+.who-section .override {
+    position: relative;
+    display: grid;
+
+}
+.who-section .override  h2 , .who-section .override p{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; 
+}
+.who-section .override  h2{
+    opacity: .8;
+    color: #ccd8dd;
+    font-size: 6rem;
+    font-family: Abril Fatface;
+    letter-spacing: 1rem;
+    z-index: 1; 
+    /* position: absolute;
+    top: -139px;
+    left: 20%; */
+    /* width: max-content; */
+}
+.who-section .override  p{
+    color: #000;
+    font-family: Abril Fatface;
+    font-size: 5rem;
+    font-weight: 600;
+    z-index: 2;
+
+    /* position: absolute;
+    top: -71px;
+    left: 35%; */
+ 
+}
+.who-section .override .desktop-pre{
+    line-height: 28px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+
+    /* position: absolute;
+    top: 35px;
+    left: 20%; */
+
+}
+.who-section .override .img-container{
+    position: absolute;
+    top: 100%;
+    left: 51%;
+    display: flex;
+    gap: 10px;
+}
+.who-section .override .img-container img{
+    
+    border-radius: 50%;
+}
+.who-section .override .img-container div{
+    text-align: center;
+    align-content: center;
+}
+.who-section .override .img-container div h3{
+    margin: 0;
+}
+.who-section .override .img-container div span{
+    color:#d3d3d3;
+}
+/* --------------------------shop-section------------------------------------------------------------------ */
+.shop-section , .wedding-section ,.holiday-section{
+    text-align: center;
+    justify-items: center;
+}
+.shop-section h3 , .wedding-section h4 , .holiday-section h4{
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #000;
+    margin: 0;
+    
+}
+.shop-section h4 , .wedding-section h5 , .holiday-section h5{
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #000;
+    text-align: center;
+}
+.shop-container , .holiday-container{
+    display:flex;
+    /* padding: 4rem; */
+
+}
+.shop-container .left-side{
+    width: 60%;
+    background-image: url('../images/collection1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    align-content: center;
+}
+.shop-section .left-side h3{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 3rem;
+}
+.shop-section .left-side h4{
+    font-family: Abril Fatface;
+    font-weight: 700;
+    font-size: 7rem;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 77px;
+    
+   
+
+}
+.shop-container .right-side .grid , 
+.holiday-container .left-side .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+.card-container .card{
+    transition: all 0.5s ease;
+    background-color: #f4f4f4;
+
+}
+.card-container .card:hover{
+     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    background-color: #f4f4f4;
+
+        
+}
+.card-container .card img{
+    max-width: 100%;
+    width: 100%; 
+
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#hot::before {
+    content: "HOT";
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px;
+    background-color: #e18787;
+    color: #fff;
+   
+    position: absolute;
+    right: 10;
+    top: 10;
+
+}
+#sale::before {
+    content: "SALE";
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 5px;
+    background-color: #e18787;
+    color: #fff;
+    position: absolute;
+    right: 10;
+    top: 10;
+
+}
+
+/* -----------icons---------------- */
+.card-container div .card 
+
+{
+    overflow: hidden;
+    position: relative;
+}
+
+.icons{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 20px;
+    opacity: 0;
+    color:#fff;
+
+    transition: transform 0.3s ease;
+}
+
+.card-container .card:hover .icons 
+{
+    transform: translate(-50%, -50%) scale(.9);
+    opacity: 1;
+}
+.icons  i{
+    background-color: #fff;
+    color: #808080;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+.icons i:hover {
+    color: #000;
+}
+.grid .card-container  h4 a {
+    color:#000;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.grid .card-container  h4 a:hover {
+    color: #e18787;
+
+}
+
+.stars{
+    color: #e18787;
+    font-size: 1rem;
+}
+.price{
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.grid .card-container p del{
+    color:#d3d3d3;
+    font-size: 14px;
+    margin-left: 3px;
+}
+
+/* ----------------------wedding section-------------------------------- */
+
+.wedding-section  {
+    background-image: url('../images/wedding.png');
+    
+    background-size: contain;
+    background-position: center;
+}
+.wedding-section .wedding-container{
+    /* padding:4rem; */
+
+}
+.wedding-container .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+} 
+
+/* -------------------holiday----------------------- */
+.holiday-section{
+    margin-top: 7rem;
+}
+.holiday-container .right-side{
+    width: 60%;
+    background-image: url('../images/holiday.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.holiday-container .right-side h5{
+    
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #000;
+    margin: 0;
+}
+.holiday-container .right-side pre{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+   
+}
+.holiday-container .right-side .span-num{
+font-family: Abril Fatface;
+font-weight: 400;
+font-size: 8rem;
+color: #000;
+
+}
+.holiday-container .right-side .span-percent{
+font-family: Abril Fatface;
+font-weight: 400;
+font-size: 5rem;
+color: #000;
+position: absolute;
+
+}
+.holiday-container .right-side .span-off{
+
+
+
+font-family: Abril Fatface;
+font-weight: 400;
+font-size: 3rem;
+color: #000;
+
+}
+
+
+
+/* ----------------counter section--------------------------- */
+
+.counter-section{
+    /* position: relative; */
+    background-image: url('../images/counter.png');
+    background-size: cover;
+    background-position: center;
+}
+.counter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+    height: 900px;
+    margin: auto;
+}
+.counter-section h1{
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #000;
+}
+.counter-section p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: .9rem;
+    color: #000;
+}
+
+.counter-section .count ul {
+    display: flex;
+}
+.counter-section .count ul li{
+    font-family: Poppins;
+
+    background-color: #fff;
+    color:#000;
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: center;
+    align-content: center;
+    padding: 35px;
+    margin: 10px;
+}
+.counter-section .count ul li span{
+    color:#d3d3d3;
+    font-size: 1rem;
+    font-weight: 400;
+    display: block;
+}
+.counter-section button{
+    margin: 30px;
+
+}
+/* ----counter----- */
+@property --num {
+    syntax: "<integer>";
+    initial-value: 60;
+    inherits: false;
+}
+ .sec{
+    counter-set: num var(--num);
+    animation-name:count;
+    animation-duration:60s;
+}
+
+  
+ .sec::before {
+    content: counter(num);
+  }
+   
+  
+  @keyframes count{
+    0%{
+      --num:60
+    }
+    
+    100%{
+      --num:0
+    }
+    
+  } 
+  
+/* ---- */
+.brand{
+ /* text-align: center; */
+
+}
+.brand .container img{
+    display: inline-block;
+    max-width: 100%;
+}
+/* -----------------------blogs----------------------- */
+
+.blogs{
+  
+    display: grid;
+    place-content: center; 
+}
+.blogs h4{
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 4rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 0;
+    
+    
+}
+.blogs p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.blogs .container {
+    /* padding: 0 4rem; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    overflow: hidden;
+
+}
+.blogs .container .card img{
+    display: block;
+    width: 100%;
+    transition: transform 0.5s ease;
+    
+   
+}
+.blogs .container .card img:hover{
+    /* transform: scale(1.1); */
+    opacity: .7;
+}
+
+.time-blog{
+    text-align: start;
+    margin: 20px 0px;
+}
+.fa-fa-calendar::before{
+    content: '\f073'; 
+    font-family: 'Font Awesome 6 Free'; 
+    color: #808080;
+    padding-right: 10px;
+    font-style: normal;
+}
+.far-fa-edit::before{
+    content: '\f044';
+    font-family: 'Font Awesome 6 Free'; 
+    color: #808080;
+    padding-right: 10px;
+    padding-left: 20px;
+    font-style: normal;
+
+}
+.date{
+    padding-right:20px ;
+    border-right: 1px solid #d3d3d3;
+}
+.time-blog .date , .pixel{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: .9rem;
+    color: grey;
+}
+.container .card h2{
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #000;
+    text-align: left;
+}
+.container .card h2:hover{
+    color: #e18787;
+    cursor: pointer;
+}
+.container .card p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: .9rem;
+    text-align: left;
+}
+
+
+
+/* ------------footer-------------- */
+.all-footer{
+    background-image: url('../images/BG-footer.png');
+    background-size: contain;
+    background-position: center;
+    display: grid;
+    gap: 1rem;
+}
+footer{
+   border-bottom: .4px solid #d3d3d3;
+   gap: 10px;
+   display: grid;
+   padding-bottom: 1rem;
+
+}
+footer .footer-container .footer-info{
+    /* padding: 4rem; */
+    display: flex;
+   /* border-bottom: .2px solid #d3d3d3; */
+
+    
+}
+.footer-container .footer-info .left{
+    width: 50%;
+    display: grid;
+    gap: 50px;
+    
+
+}
+.footer-container .footer-info .left .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.about h5 , .customer-services h5 , .store h5{
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #000;
+}
+.footer-container .footer-info .left .info div ul {
+   display: grid;
+   gap: 30px;
+}
+.footer-container .footer-info .left .info div ul li{
+    /* position: relative;     */
+    color: #808080;
+    font-size: .8rem;
+    transition: transform 0.5s ease;
+    
+
+}
+.footer-container .footer-info .left .info div ul li:hover{
+    color: #000;
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+.footer-container .footer-info .left .info div ul li::before{
+    content: "\f30b";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    transform: translateY(-50%);
+
+    color: #000;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+.footer-container .footer-info .left .info div ul li:hover::before{
+    opacity: 1;
+}
+
+/* ------------------------------------------------------- */
+.footer-container .footer-info .left .social-links{
+    display: flex;
+    gap: 30px;
+
+}
+.footer-container .footer-info .left .social-links span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.footer-container .footer-info .left .social-links ul{
+    display: flex;
+    gap: 15px;
+
+}
+.footer-container .footer-info .left .social-links ul li{
+    font-size: 1rem;
+}
+.footer-container .footer-info .left .social-links ul li a i:hover{
+    color:#808080
+}
+/* ------------- */
+.footer-container .footer-info .right {
+    background-image: url('../images/new-letter.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+
+
+}
+.footer-container .footer-info .right .news{
+    padding: 60px;
+}
+.footer-container .footer-info .right .news h5{
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: #000;
+    margin: 0;
+}
+.footer-container .footer-info .right .news p{
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: .8rem;
+    color: #808080;
+}
+.footer-container .footer-info .right .news form {
+    display: grid;
+    gap: 20px;
+}
+.footer-container .footer-info .right .news form input{
+    padding: 15px;
+    border: 1px solid black;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #808080;
+    max-width: 70%;
+    
+    
+
+}
+.footer-container .footer-info .right .news form button{
+    font-family: Abril Fatface;
+    font-weight: 400;
+    font-size: 1.2rem;
+    max-width: fit-content;
+
+}
+/* ----------------- */
+.row-footer .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+}
+.row-footer .container div p{
+    font-size: .8rem;
+}
+.row-footer .container div p:hover{
+    color:#e18787;
+    cursor: pointer;
+}
+
+
+
+/* ///////////////////////////////// */
+
+
+
+
